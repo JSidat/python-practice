@@ -5,7 +5,7 @@ n = int(input()).strip()
 
 for i in range(n):
     x = int(input().strip()) # strip method removes spaces from the beginning and end of a string
-    d = deque(map(int, input().split(' '))) # 
+    d = deque(map(int, input().split(' '))) # for each value inputted in the deque, convert it to an int type 
     test = True
     current_value = inf # sets the current value to infinity(infinitely long floor)
 

@@ -1,8 +1,14 @@
-import pprint
+s = input()
+dict = {}
+for i in s:
+    if i not in dict:
+        dict[i] = 1
+    else:
+        dict[i] += 1
+        sorted_dict = sorted(dict.items(), key=lambda x: x[1], reverse=True)
 
-message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
-count = {}
-for character in message:
-    count.setdefault(character, 0)
-    count[character] = count[character] + 1
-pprint.pprint(count)
+print(sorted_dict)
+
+
+#
+#list(sorted_dict.items())[:3])

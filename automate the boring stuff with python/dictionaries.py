@@ -69,6 +69,52 @@ print('my name is Alice and my birthday is ' + birthdays.get('Alice', 'soon'))
 # The above will use a key and print the corresponding birthday. If the key is not in the dict, the second value is used
 
 
+# The setdefault() method
 
+# allows you to assing a value to ta key if the key is not present in the dictionary
 
+spam = {'name': 'pookie', 'age': 5}
+spam.setdefault('colour', 'black') # first argument sees if the key is present. if not present it will add the key to the dictionary with the value(2nd argument in setdefault() method)
+print(spam) # will return {'name': 'pookie', 'age': 5, 'colour': 'black'}
 
+# if key is already present in the dict, the value of the key will be returned
+
+# character_count program
+
+message = 'It was a bright cold day in April, and the clocks were striking thirteen'
+count = {}
+
+for i in message: # program loops through eacch character in the string assigned to the variable 'message'
+    count.setdefault(i, 0) # method adds each character to a dict and sets it to 0 if the key is not present 
+    count[i] = count[i] + 1 # everytime a letter that is already in the dict appears, the count of that letter increases by 1
+print(count) # return the final dict {' ': 13, ',': 1, '.': 1, 'A': 1, 'I': 1, 'a': 4, 'c': 3, 'b': 1, 'e': 5,
+# 'd': 3, 'g': 2, 'i':6, 'h': 3, 'k': 2, 'l': 3, 'o': 2, 'n': 4, 'p': 1, 's': 3, 'r': 5, 't': 6, 'w': 2, 'y': 1}
+
+# import pprint to make the final dict look much neater 
+
+pprint.pprint(count) or print(pprint.pformat(count)) # will give you the dict in a much neater format 
+'''
+{' ': 13,
+ ',': 1,
+ '.': 1,
+ 'A': 1,
+ 'I': 1,
+ 'a': 4,
+ 'b': 1,
+ 'c': 3,
+ 'd': 3,
+ 'e': 5,
+ 'g': 2,
+ 'h': 3,
+ 'i': 6,
+ 'k': 2,
+ 'l': 3,
+ 'n': 4,
+ 'o': 2,
+ 'p': 1,
+ 'r': 5,
+ 's': 3,
+ 't': 6,
+ 'w': 2,
+ 'y': 1}
+ '''
